@@ -1,0 +1,8 @@
+﻿  Main.cpp
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(242,36): error C2601: 'reshape': 區域函式定義不合法
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(229): message : 此行包含沒有相對應符號的 '{'
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(247,48): error C2601: 'keyboard': 區域函式定義不合法
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(229): message : 此行包含沒有相對應符號的 '{'
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(251,13): error C2601: 'idle': 區域函式定義不合法
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(229): message : 此行包含沒有相對應符號的 '{'
+C:\Users\User\Desktop\圖學作業\hw4\0612129_Explosion\0612129_Explosion\Main.cpp(229): fatal error C1075: '{': 找不到任何相符的語彙基元

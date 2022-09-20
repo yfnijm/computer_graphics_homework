@@ -1,0 +1,48 @@
+#version 430
+out vec4 frag_color;
+
+uniform vec3 LightPosition;
+uniform float Ka;
+uniform float Kd;
+uniform float Ks;
+uniform float alpha;
+uniform vec3 la;
+uniform vec3 ld;
+uniform vec3 ls;
+
+uniform int shadeMode;
+uniform int BoundMode;
+
+in vec3 N;
+in vec3 v;
+in vec4 color; 
+in vec3 n;
+
+void main() {
+	vec3 E = normalize(-v);
+	if(shadeMode == 0){
+		frag_color = color;
+	}else if(shadeMode == 1){
+		vec3 L = normalize(LightPosition - v);   
+		//vec3 E = normalize(-v); //EyePos is (0,0,0)  
+		vec3 R = normalize(-reflect(L,N));
+
+		frag_color = vec4((Ka * la) 
+					+ clamp(Kd * ld * max(dot(N,L), 0.0), 0.0, 1.0) 
+					+ clamp(Ks * pow(max(dot(R,E),0.0), alpha) * ls, 0.0, 1.0) 
+					, 1.0);
+	}else if(shadeMode == 2){
+		vec4 toneColor;
+		if (color.x > 0.95) toneColor = vec4(1.0, 1.0, 1.0 ,1.0);
+		else if (color.x > 0.5) toneColor = vec4(0.6,0.6,0.6,1.0);
+		else if (color.x > 0.25) toneColor = vec4(0.4,0.4,0.4,1.0);
+		else toneColor = vec4(0.2,0.2,0.2,1.0);
+		frag_color = toneColor; 
+	}
+	if(BoundMode == 1){
+		vec3 E = normalize(-v);
+		if(abs(dot(N,E)) < 0.2)
+			frag_color = vec4(1.0, 1.0, 1.0, 1.0);
+	}
+}
+

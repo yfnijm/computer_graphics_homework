@@ -1,0 +1,4 @@
+﻿D:\visual studio 2019\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (DrawTriangle.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  exampleHW2.cpp
+C:\Users\User\Desktop\圖學作業\hw2\HW2Example\VertexShaderExample\VertexShaderExample\include\FreeImage.h(1,1): warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+  VertexShaderExample.vcxproj -> C:\Users\User\Desktop\圖學作業\hw2\HW2Example\VertexShaderExample\Debug\VertexShaderExample.exe

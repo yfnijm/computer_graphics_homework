@@ -1,0 +1,8 @@
+#version 430
+out vec4 frag_color;
+uniform int Kernal;
+
+void main() {
+    frag_color = vec4(pow(Kernal/25000.,0.8)+0.2, Kernal/20000.+0.4, pow(Kernal/50000.,-2) + 0.2, 0.3);
+	if (Kernal < 0) frag_color = vec4(pow(Kernal/30000.,2)+0.4, 0.6, 0.2, 0.3);
+}
